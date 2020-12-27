@@ -1,0 +1,34 @@
+code {
+   .var {
+     // 变量
+     color: #d63200;
+   }
+   .key_word {
+     // 关键字
+     color: #b92dbc;
+   }
+   .string_type {
+     // 字符串
+     color: #3a385d;
+   }
+   .number_type {
+     // 数字
+     color: #2117ce;
+   }
+   .json_type {
+     // json
+     color: #a8a9cc;
+   }
+   .code_indent {
+     display: block;
+   }
+   .code_indent_2 {
+     text-indent: 10px;
+   }
+   .code_indent_4 {
+     text-indent: 20px;
+   }
+   .code_indent_6 {
+     text-indent: 40px;
+   }
+ }

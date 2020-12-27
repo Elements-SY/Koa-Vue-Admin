@@ -1,0 +1,16 @@
+@import './variables.scss';
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body,
+html,
+#app,
+.login_container,
+.register_container {
+  height: 100%;
+  margin: 0;
+  padding: 0
+}

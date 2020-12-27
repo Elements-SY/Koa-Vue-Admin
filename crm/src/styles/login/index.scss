@@ -1,0 +1,227 @@
+.box {
+   height: 100%;
+   position: relative;
+   z-index: 1;
+}
+
+.flowImage {
+   position: relative;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 1;
+   background-attachment: fixed;
+   overflow: hidden;
+}
+
+.flowImage>p,
+.flowContent>p {
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 10%;
+   color: #fff;
+   font-size: 30px;
+   transform: translate(-10%, -50%);
+}
+
+.flowContent {
+   position: relative;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   z-index: 1;
+   overflow-x: hidden;
+   background-attachment: fixed;
+}
+
+.bg1 {
+   background-image: url("../../assets/images/bg/banner1.jpg");
+}
+
+.bg2:nth-child(2) {
+   background-image: url("../../assets/images/bg/banner2.jpg");
+}
+
+// .bg3:nth-child(3) {
+//    background-image: url("../../assets/images/bg/banner3.jpg");
+// }
+
+.flowImage:before {
+   position: absolute;
+   content: "";
+   background: rgba(0, 0, 0, 0.4);
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.login_wrap {
+   width: 30%;
+   margin: 10% auto;
+   text-align: center;
+}
+
+.login_title {
+   color: #fff;
+}
+
+.nav {
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   right: 0;
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+}
+
+li {
+   list-style: none;
+   float: left;
+   padding: 22px;
+}
+
+a {
+   text-decoration: none;
+   color: #fff;
+}
+
+a:hover {
+   color: aqua;
+}
+
+input {
+   outline: none;
+   font-size: 15px;
+   color: #fff;
+   border: none;
+   width: 90%;
+   display: inline-block;
+   background: transparent;
+   font-family: 'Muli', sans-serif;
+   text-align: center;
+   letter-spacing: 2px;
+   margin: 0 0 2em;
+   padding: .6em 0em;
+   background: rgba(255, 255, 255, 0.22);
+   border-radius: 26px;
+}
+
+button {
+   width: 90%;
+}
+
+.submit_footer {}
+
+input::-webkit-input-placeholder {
+   /* WebKit, Blink, Edge */
+   color: #fff;
+}
+
+input:-moz-placeholder {
+   /* Mozilla Firefox 4 to 18 */
+   color: #fff;
+}
+
+input::-moz-placeholder {
+   /* Mozilla Firefox 19+ */
+   color: #fff;
+}
+
+input:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color: #fff;
+}
+
+input::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+   .login_wrap {
+      width: 50%;
+   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+   .login_wrap {
+      width: 80%;
+   }
+}
+
+>>>.el-form-item__error {
+   top: 57%;
+   width: 100%;
+   text-align: center;
+}
+
+/* 团队 */
+.team {
+   background: #f5f5f5;
+   padding-top: 3rem !important;
+   padding-bottom: 3rem !important;
+}
+
+.team h3 {
+   font-size: 52px;
+   color: #333;
+   font-weight: 600;
+   font-family: monospace;
+   text-transform: capitalize;
+   letter-spacing: 0px;
+   text-align: center;
+   margin-bottom: 1.5rem !important;
+}
+
+.team h3 span {
+   font-weight: 300;
+   color: #555;
+}
+
+.team .team_list {
+   margin-top: 1.5rem !important;
+}
+
+.team .team_list .team_user {
+   text-align: center;
+   padding: 2em 1em;
+   background: #fff;
+   box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, .1);
+}
+
+.team_user {
+   text-align: center;
+}
+
+.team_user .team_logo {}
+
+.team_logo img {
+   border: 5px solid #f9f9f9;
+   border-radius: 50%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.team_user .team_info {}
+
+.team_info h4 {
+   margin: .7em 0 .2em;
+   font-weight: 500;
+   font-size: 23px;
+   color: #323648;
+}
+
+.team_info p {
+   margin: 0;
+   font-size: 17px;
+   line-height: 1.8em;
+   letter-spacing: 1px;
+   color: #707579;
+}

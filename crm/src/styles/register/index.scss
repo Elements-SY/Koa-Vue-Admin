@@ -1,0 +1,70 @@
+.video_wrap {
+   width: 100%;
+   height: 100%;
+}
+
+video {
+   position: fixed;
+   right: 0px;
+   bottom: 0px;
+   min-width: 100%;
+   min-height: 100%;
+   height: auto;
+   width: auto;
+   /*加滤镜*/
+   /* filter: blur(15px); */
+   /* 背景模糊设置 */
+   /* -webkit-filter: grayscale(100%); */
+   /* 背景灰度设置 */
+   /* filter: grayscale(100%); */
+}
+
+source {
+   min-width: 100%;
+   min-height: 100%;
+   height: auto;
+   width: auto;
+}
+
+.register_wrap {
+   width: 40%;
+   padding: 10px;
+   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+   font-weight: 100;
+   background: rgba(0, 0, 0, 0.3);
+   color: white;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -20%;
+   margin-top: -20%;
+   font-size: 1.2rem;
+}
+
+.submit_footer {
+   text-align: center;
+}
+
+.form_label_slot {
+   color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+   .register_wrap {
+      width: 80%;
+      left: 50%;
+      top: 50%;
+      margin-left: -42%;
+      margin-top: -40%;
+   }
+}
+
+@media screen and (min-width: 670px) and (max-width: 800px) {
+   .register_wrap {
+      width: 60%;
+      left: 50%;
+      top: 50%;
+      margin-left: -30%;
+      margin-top: -30%;
+   }
+}
