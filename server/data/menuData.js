@@ -88,7 +88,7 @@ module.exports = [
             title: 'ESLint',
             icon: 'icon-eslint',
             children: []
-         },{
+         }, {
             path: '/Excel',
             title: 'Excel',
             icon: 'icon-export_excel',
@@ -97,7 +97,7 @@ module.exports = [
                   path: '/Excel/export',
                   title: 'Export',
                   icon: 'icon-export-file',
-               }, 
+               },
                {
                   path: '/Excel/import',
                   title: 'Import',

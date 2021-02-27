@@ -1,5 +1,4 @@
 'use strict'
-
 const Koa = require('koa');
 const bodyparser = require('koa-bodyparser')();
 const cors = require('koa-cors');
