@@ -17,7 +17,7 @@ export function validAccountName(rule, value, callback) {
    } else {
       callback();
    }
-};
+}
 
 export function validPass(rule, value, callback, data, refs) {
    console.log(rule, value, callback, data, refs)
@@ -31,7 +31,7 @@ export function validPass(rule, value, callback, data, refs) {
       }
       callback();
    }
-};
+}
 
 export function twiceValidPass(rule, value, callback, data, refs) {
    if (value === "") {
@@ -43,4 +43,4 @@ export function twiceValidPass(rule, value, callback, data, refs) {
    } else {
       callback();
    }
-};
+}

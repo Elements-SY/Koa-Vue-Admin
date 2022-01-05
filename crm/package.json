@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --mode dev",
     "build": "vue-cli-service build",
+    "build-prd": "vue-cli-service build --mode prd",
+    "build-dev": "vue-cli-service build --mode dev",
+    "build-test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -14,6 +17,7 @@
     "element-ui": "^2.14.1",
     "file-saver": "^2.0.5",
     "js-cookie": "^2.2.1",
+    "js-md5": "^0.7.3",
     "jszip": "^3.5.0",
     "lrz": "^4.9.41",
     "moment": "^2.29.1",

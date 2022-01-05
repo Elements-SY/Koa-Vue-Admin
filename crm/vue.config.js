@@ -17,7 +17,7 @@ module.exports = {
   lintOnSave: false, // 保存代码时是否启用ESlint
   runtimeCompiler: false,
   //  transpileDependencies: [], // webpack 外部扩展插件;对应这个API webpackjs.com/configuration/externals/
-  // productionSourceMap: true, // 打包后的静态文件是否需要生产source map 文件,优先级最高
+  productionSourceMap: false, // 打包后的静态文件是否需要生产source map 文件,优先级最高
   css: {
     // 是否使用css分离插件 ExtractTextPlugin,如果不分离将会把css打包于js文件中
     extract: true,
@@ -48,7 +48,23 @@ module.exports = {
         },
         changeOrigin: true, // target是域名的话，需要这个参数，
         // secure: true, // 设置支持https协议的代理
-      }
+      },
+      '/translate': {
+        target: 'http://api.fanyi.baidu.com/',
+        pathRewrite: {
+          '^/translate': '/'
+        },
+        changeOrigin: true, // target是域名的话，需要这个参数，
+        secure: true, // 设置支持https协议的代理
+      },
+      '/baidubce': {
+        target: 'https://aip.baidubce.com/',      
+        pathRewrite: {
+          '^/baidubce': '/'
+        },
+        changeOrigin: true, // target是域名的话，需要这个参数，
+        secure: true, // 设置支持https协议的代理
+      },
     },
     overlay: { // 让浏览器 overlay 同时显示警告和错误
       warnings: true,
