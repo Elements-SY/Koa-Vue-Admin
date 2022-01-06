@@ -33,7 +33,7 @@
             </el-form-item>
 
             <el-form-item class="submit_footer">
-              <el-button type="primary" round @click="submitForm('ruleForm')"
+              <el-button type="primary" round @click.enter="submitForm('ruleForm')"
                 >登录</el-button
               >
             </el-form-item>
@@ -189,7 +189,15 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    var _self = this;
+    document.onkeydown = function(e){
+      var key = window.event.keyCode;
+      if(key == 13 || key ==100){
+        _self.submitForm('ruleForm')
+      }
+    }
+  },
   mounted() {},
   // 如果页面有keep-alive缓存功能，这个函数会触发
   activated() {},
