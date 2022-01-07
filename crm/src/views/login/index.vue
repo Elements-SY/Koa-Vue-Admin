@@ -33,7 +33,10 @@
             </el-form-item>
 
             <el-form-item class="submit_footer">
-              <el-button type="primary" round @click.enter="submitForm('ruleForm')"
+              <el-button
+                type="primary"
+                round
+                @click.enter="submitForm('ruleForm')"
                 >登录</el-button
               >
             </el-form-item>
@@ -191,12 +194,12 @@ export default {
   watch: {},
   created() {
     var _self = this;
-    document.onkeydown = function(e){
+    document.onkeydown = function (e) {
       var key = window.event.keyCode;
-      if(key == 13 || key ==100){
-        _self.submitForm('ruleForm')
+      if (key == 13 || key == 100) {
+        _self.submitForm("ruleForm");
       }
-    }
+    };
   },
   mounted() {},
   // 如果页面有keep-alive缓存功能，这个函数会触发
@@ -210,14 +213,14 @@ export default {
             .dispatch("account/Login", this.ruleForm)
             .then((res) => {
               console.log("账号登录", res);
-              if(res.data.code == 200){
-              this.$message({
-                type: "success",
-                message: "登录成功",
-              });
-              this.$router.push({
-                path: "/home",
-              });
+              if (res.data.code == 200) {
+                this.$message({
+                  type: "success",
+                  message: "登录成功",
+                });
+                this.$router.push({
+                  path: "/home",
+                });
               }
             })
             .catch((error) => {

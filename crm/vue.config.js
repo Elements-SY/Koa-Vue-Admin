@@ -42,7 +42,7 @@ module.exports = {
     // 因为devServer.proxy api使用了http-proxy-middleware插件的API
     proxy: {
       '/dev-api': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:3001/',
         pathRewrite: {
           '^/dev-api': '/'
         },

@@ -13,11 +13,11 @@ switch (process.env.NODE_ENV) {
     break
   // 测试环境
   case 'testing':
-    APIHOST = 'http://localhost:3000'
+    APIHOST = 'http://localhost:3001'
     break
   // 生产环境
   default:
-    APIHOST = 'http://localhost:3000'
+    APIHOST = 'http://localhost:3001'
     break
 }
 // 百度翻译 环境
