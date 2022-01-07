@@ -1,11 +1,12 @@
+let currentFullYear = new Date().getFullYear();
 module.exports = [
    {
-      id: "B672-1994-6826",
+      id: "B672-1980-6826",
       account: 'root',
       userName: '周杰伦',
       nickName: 'Jay Chou',
       sex: 1,
-      age: '40',
+      age: (currentFullYear - 1980),
       birth: '1980',
       job: '歌手',
       hobby: "潜水",
@@ -18,12 +19,12 @@ module.exports = [
       token: "A8F6D02c-9D96-AFb3-aaA5-ABD1B57F04dd",
    },
    {
-      id: "B672-1995-6825",
+      id: "B672-1971-6825",
       account: 'admin',
       userName: '阿姆',
       nickName: 'Eminem',
       sex: 1,
-      age: '48',
+      age: (currentFullYear - 1971),
       birth: '1971',
       job: '歌手',
       hobby: "速降",
@@ -41,7 +42,7 @@ module.exports = [
       userName: '李楠',
       nickName: 'PJ',
       sex: 0,
-      age: '24',
+      age: (currentFullYear - 1996),
       birth: '1996',
       job: 'UI设计师',
       hobby: "网游",

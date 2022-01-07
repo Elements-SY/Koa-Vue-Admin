@@ -93,7 +93,6 @@ export default {
             image: image,
             id_card_side: id_card_side
          }
-         let _this = this;
          orcImageIdCard(accessToken, params).then((res) => {
             loading.close();
             if (res.status === 200) {
