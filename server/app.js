@@ -5,7 +5,7 @@ const cors = require('koa-cors');
 const router = require('./route')
 const app = new Koa();
 // 端口号
-var port = 3000
+var port = 3001
 app.use(bodyparser);
 app.use(cors());
 app.use(router.routes(), router.allowedMethods());
