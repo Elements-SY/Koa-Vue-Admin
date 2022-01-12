@@ -73,7 +73,8 @@
               <ul>
                 <li>
                   <span class="work_title">状态: </span>
-                  <span class="work_name">{{ item.state | cameraState }}</span>
+                  <span class="work_name">{{ item.state }}</span>
+                   <!-- | cameraState -->
                 </li>
                 <li>
                   <span class="work_title">位置: </span>
@@ -209,7 +210,6 @@ export default {
         files: [],
       },
       imageUrl: "",
-
       // rules: formRule // 添加标记表单校验规则
     };
   },
@@ -346,13 +346,13 @@ export default {
 <style lang="scss" scoped>
 .map {
   width: 100%;
-  height: 600px;
+  height: calc(100vh - 112px);
   position: relative;
 }
 
 .search_place {
   position: absolute;
-  top: 10px;
+  top: 100px;
   left: 0;
 }
 

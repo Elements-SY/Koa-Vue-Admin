@@ -13,7 +13,7 @@ export default {
     return {};
   },
   created() {
-    this.initMap()
+    this.initMap();
   },
   methods: {
     initMap() {
@@ -30,6 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 #amapContainer {
-  height: 300px;
+  width: 100%;
+  height: calc(100vh - 112px);
+  position: relative;
 }
 </style>

@@ -16,7 +16,7 @@ module.exports = {
   },
   lintOnSave: false, // 保存代码时是否启用ESlint
   runtimeCompiler: false,
-  //  transpileDependencies: [], // webpack 外部扩展插件;对应这个API webpackjs.com/configuration/externals/
+  // transpileDependencies: [], // webpack 外部扩展插件;对应这个API webpackjs.com/configuration/externals/
   productionSourceMap: false, // 打包后的静态文件是否需要生产source map 文件,优先级最高
   css: {
     // 是否使用css分离插件 ExtractTextPlugin,如果不分离将会把css打包于js文件中

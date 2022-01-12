@@ -20,7 +20,7 @@
 
 Vue-Element-Admin-System管理系统集成ect<img width="30" src="./src/assets/images/icon/funny.png" alt="smile ">自己去看懒地写
 该项目数据采用了mock 和 Koa，如果不想使用mock而想使用Koa请求数据，将main.js中的Mock.init()注释掉。
-然后进入server文件夹npmi & npm run start启动Koa服务之后，再npm run serve启动Vue客户端项目即可。
+然后进入server文件夹npm i & npm run start启动Koa服务之后，再npm run serve启动Vue客户端项目即可。
 
 ## Build Setup
 
