@@ -42,6 +42,9 @@
           ></bm-local-search>
         </div>
       </section>
+      <!-- :icon="{
+         url: 'https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00795-2487.jpg', 
+         size: {width: 300, height: 157}}" -->
       <bm-marker
         class="marker_window_message"
         v-for="(item, index) in mapList.marker"
@@ -74,7 +77,6 @@
                 <li>
                   <span class="work_title">状态: </span>
                   <span class="work_name">{{ item.state }}</span>
-                   <!-- | cameraState -->
                 </li>
                 <li>
                   <span class="work_title">位置: </span>

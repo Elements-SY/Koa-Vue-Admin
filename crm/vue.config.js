@@ -36,6 +36,17 @@ module.exports = {
     // 启用 CSS modules for all css / pre-processor files.
     requireModuleExtension: true
   },
+  configureWebpack: {
+    // 优化
+    optimization: {
+      splitChunks: {
+        chunks: "all",
+      },
+      runtimeChunk: {
+        name: (entrypoint) => `runtime-${entrypoint.name}`,
+      },
+    },
+  },
   // support all api; link: https://www.webpackjs.com/configuration/dev-server/
   devServer: {
     // 更多关于devServer.proxy的API，请参考http-proxy-middleware插件的API
