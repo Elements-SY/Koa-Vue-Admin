@@ -11,6 +11,8 @@ export default {
    name: "baiduOcr",
    data() {
       return {
+         title: "OCR识别",
+         tip: "",
          content: [], // 识别结果返回的数据集合
          showDialog: false, // 是否显示对话框
          url: '', // 上传图片地址
@@ -28,6 +30,97 @@ export default {
          this.imgUrl = window.webkitURL.createObjectURL(file) || window.URL.createObjectURL(file) //
          this.url = this.imgUrl; // file对象转blob url
          this.srcList[0] = this.imgUrl; // 上传图片预览地址
+      },
+      getPicData(pic, file) {
+         if (this.mark === "text") {
+            this.title = "OCR文字识别";
+            this.tip = "";
+            // 通用文字识别
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               mark: this.mark,
+               file: file,
+            };
+            // console.log(params)
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "IDCardFront") {
+            this.title = "OCR身份证正面识别";
+            this.tip = "";
+            // 身份证识别(正)
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               id_card_side: "front",
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "IDCardBack") {
+            this.title = "OCR身份证背面识别";
+            this.tip = "";
+            // 身份证识别(反)
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               id_card_side: "back",
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "animal") {
+            this.title = "OCR动物识别";
+            this.tip = "";
+            // 动物识别
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "plant") {
+            this.title = "OCR植物识别";
+            this.tip = "";
+            // 植物识别
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "dish") {
+            this.title = "OCR菜品识别";
+            this.tip = "";
+            // 菜品识别
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else if (this.mark === "ingredient") {
+            this.title = "OCR果蔬识别";
+            this.tip = "(温馨提示：如果果蔬识别没有找到您可以尝试一下植物识别)";
+            // 果蔬识别
+            let params = {
+               client_id: "qbI91UF9968FH9K63ip2Hy9S",
+               client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
+               image: pic,
+               mark: this.mark,
+               file: file,
+            };
+            this.getBaiduAccessToken(params);
+         } else {
+         }
       },
       // 获取Token
       getBaiduAccessToken({ client_id, client_secret, image, mark, file, id_card_side }) {

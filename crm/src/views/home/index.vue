@@ -6,12 +6,7 @@
       <translateLanguage v-if="mark === 'translate'" />
       <upLoad v-else @getPicData="getPicData" />
     </el-card>
-    <el-dialog
-      :title="title"
-      :visible.sync="showDialog"
-      width="30%"
-      center
-    >
+    <el-dialog :title="title" :visible.sync="showDialog" width="30%" center>
       <div>
         <el-image
           style="width: 100px; height: 100px"
@@ -47,8 +42,6 @@ export default {
   data() {
     return {
       mark: "", // select选择应用程序
-      title: "OCR识别",
-      tip: "",
     };
   },
   computed: {},
@@ -62,97 +55,6 @@ export default {
     // select选择应用程序
     searchSelect(val) {
       this.mark = val;
-    },
-    getPicData(pic, file) {
-      if (this.mark === "text") {
-        this.title = "OCR文字识别";
-        this.tip = "";
-        // 通用文字识别
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          mark: this.mark,
-          file: file,
-        };
-        // console.log(params)
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "IDCardFront") {
-        this.title = "OCR身份证正面识别";
-        this.tip = "";
-        // 身份证识别(正)
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          id_card_side: "front",
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "IDCardBack") {
-        this.title = "OCR身份证背面识别";
-        this.tip = "";
-        // 身份证识别(反)
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          id_card_side: "back",
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "animal") {
-        this.title = "OCR动物识别";
-        this.tip = "";
-        // 动物识别
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "plant") {
-        this.title = "OCR植物识别";
-        this.tip = "";
-        // 植物识别
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "dish") {
-        this.title = "OCR菜品识别";
-        this.tip = "";
-        // 菜品识别
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else if (this.mark === "ingredient") {
-        this.title = "OCR果蔬识别";
-        this.tip = "(温馨提示：如果果蔬识别没有找到你也可以尝试一下植物识别)";
-        // 果蔬识别
-        let params = {
-          client_id: "qbI91UF9968FH9K63ip2Hy9S",
-          client_secret: "iftOCPXztCNAav4c8KQtzc9RkWDmCECz",
-          image: pic,
-          mark: this.mark,
-          file: file,
-        };
-        this.getBaiduAccessToken(params);
-      } else {
-      }
     },
   },
 };
